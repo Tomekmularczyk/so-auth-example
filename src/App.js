@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Link } from 'react-router-dom'
+import { Switch, Link, Redirect } from 'react-router-dom'
 import CreateAccount from './pages/CreateAccount'
 import ConfirmEmail from './pages/ConfirmEmail'
 import CreateProfile from './pages/CreateProfile'
@@ -21,6 +21,7 @@ class App extends Component {
           <AuthorizedRoute path="/confirm-email" component={ConfirmEmail} />
           <AuthorizedRoute path="/create-profile" component={CreateProfile} />
           <AuthorizedRoute path="/dashboard" component={Dashboard} />
+          <Redirect to="/" />
         </Switch>
       </div>
     )

@@ -2,8 +2,8 @@ import { createStore } from 'redux'
 
 const INITIAL_STATE = {
   isLoggedIn: false,
-  isEmailConfirmed: true,
-  isProfileCreated: true,
+  isEmailConfirmed: false,
+  isProfileCreated: false,
 }
 
 function reducer (state = INITIAL_STATE, action) {
