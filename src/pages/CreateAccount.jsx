@@ -2,6 +2,7 @@ import React from 'react'
 
 const CreateAccount = () => (
   <form>
+    <h5>Create account</h5>
     <input
       type="email"
       name="email"

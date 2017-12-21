@@ -2,6 +2,7 @@ import React from 'react'
 
 const CreateProfile = () => (
   <form>
+    <h5>Create profile</h5>
     <input
       type="text"
       name="name"

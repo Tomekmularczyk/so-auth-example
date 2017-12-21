@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Link, Redirect } from 'react-router-dom'
+import Login from './pages/Login';
 import CreateAccount from './pages/CreateAccount'
 import ConfirmEmail from './pages/ConfirmEmail'
 import CreateProfile from './pages/CreateProfile'
@@ -11,13 +12,15 @@ class App extends Component {
     return (
       <div>
         <nav>
-          <Link to="/">create account</Link>
+          <Link to="/">login</Link>
+          <Link to="/create-account">create account</Link>
           <Link to="/confirm-email">confirm email</Link>
           <Link to="/create-profile">create profile</Link>
           <Link to="/dashboard">dashboard</Link>
         </nav>
         <Switch>
-          <AuthorizedRoute exact path="/" component={CreateAccount} />
+          <AuthorizedRoute exact path="/" component={Login} />
+          <AuthorizedRoute path="/create-account" component={CreateAccount} />
           <AuthorizedRoute path="/confirm-email" component={ConfirmEmail} />
           <AuthorizedRoute path="/create-profile" component={CreateProfile} />
           <AuthorizedRoute path="/dashboard" component={Dashboard} />
